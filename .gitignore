@@ -1,0 +1,12 @@
+.gradle/
+build/
+gradle/
+gradlew
+gradlew.bat
+settings.gradle
+solidbase.iml
+solidbase.ipr
+solidbase.iws
+solidbase.main.iml
+solidbase.test.iml
+
