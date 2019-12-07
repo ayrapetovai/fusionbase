@@ -1,7 +1,6 @@
 package ru.solidbase.drivers
 
 import java.lang.IllegalStateException
-import java.util.*
 import kotlin.reflect.KClass
 
 class Configuration {
