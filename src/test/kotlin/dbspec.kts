@@ -16,6 +16,7 @@ import ru.solidbase.drivers.*
 postgres {
     catalog("postgres", "3") {
         schema("myscheme") {
+            val TABLE2_NAME = "mytable2"
             table("mytable1") {
                 column("id") {
                     primary = true
@@ -29,12 +30,15 @@ postgres {
                     type = Varchar(100)
                     nullable = false
                 }
+                column("myForienKey") {
+                    forienKey = TABLE2_NAME column "id"
+                }
                 data {
                     url = "classpath:db/data/1342/mytable.csv"
                 }
 //                schema("") {}
             }
-            table("mytable2") {
+            table(TABLE2_NAME) {
                 column("id") {
                     primary = true
                     incrementing = true

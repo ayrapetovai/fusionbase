@@ -75,6 +75,13 @@ class Number (
     val digits: Int
 ): SqlType
 
+class ForiganKey(
+    val table: String,
+    val column: String
+)
+
+infix fun String.column(column: String) = ForiganKey(this, column)
+
 class Column(
     val name: String
 ) {
@@ -91,6 +98,7 @@ class Column(
     var incrementing = true
     var nullable = true
     var type: SqlType = SqlTypeNone()
+    var forienKey: ForiganKey = ForiganKey("", "")
 }
 
 
